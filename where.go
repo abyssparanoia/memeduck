@@ -1,10 +1,10 @@
 package memeduck
 
 import (
-	"github.com/MakeNowJust/memefish/pkg/ast"
+	"github.com/cloudspannerecosystem/memefish/ast"
 	"github.com/pkg/errors"
 
-	"github.com/genkami/memeduck/internal"
+	"github.com/abyssparanoia/memeduck/internal"
 )
 
 // WhereCond is a conditional expression that appears in WHERE clauses.
