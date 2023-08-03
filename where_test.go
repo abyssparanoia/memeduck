@@ -3,8 +3,8 @@ package memeduck_test
 import (
 	"testing"
 
-	"github.com/MakeNowJust/memefish/pkg/ast"
-	"github.com/genkami/memeduck"
+	"github.com/abyssparanoia/memeduck"
+	"github.com/cloudspannerecosystem/memefish/ast"
 	"github.com/stretchr/testify/assert"
 )
 
