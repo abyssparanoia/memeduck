@@ -5,7 +5,7 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	"github.com/genkami/memeduck"
+	"github.com/abyssparanoia/memeduck"
 )
 
 func testDelete(t *testing.T, stmt *memeduck.DeleteStmt, expected string) {

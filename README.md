@@ -1,15 +1,18 @@
 # memeduck
-![ci status](https://github.com/genkami/memeduck/workflows/Test/badge.svg)
-[![Go Reference](https://pkg.go.dev/badge/github.com/genkami/memeduck.svg)](https://pkg.go.dev/github.com/genkami/memeduck)
+
+![ci status](https://github.com/abyssparanoia/memeduck/workflows/Test/badge.svg)
+[![Go Reference](https://pkg.go.dev/badge/github.com/abyssparanoia/memeduck.svg)](https://pkg.go.dev/github.com/abyssparanoia/memeduck)
 
 ![duck](./doc/img/memeduck.png)
 
-The memeduck is a SQL query builder for Cloud Spanner. (named after [MakeNowJust/memefish](https://github.com/MakeNowJust/memefish))
+The memeduck is a SQL query builder for Cloud Spanner. (named after [MakeNowJust/memefish](https://github.com/cloudspannerecosystem/memefish))
 
 **This project is currently in an experimental state and any API will be changed in an backward-incompatible way.**
 
 ## Examples
+
 ### Select
+
 ```go
 	query, _ := memeduck.Select("user", []string{"name", "created_at"}).
 		Where(memeduck.Eq(memeduck.Ident("good_at"), "cooking")).
@@ -44,6 +47,7 @@ The memeduck is a SQL query builder for Cloud Spanner. (named after [MakeNowJust
 ```
 
 ### Insert
+
 ```go
 type ExampleUserStruct struct {
 	Name string `spanner:"UserName"`
@@ -60,6 +64,7 @@ type ExampleUserStruct struct {
 ```
 
 ### Update
+
 ```go
 	query, _ := memeduck.Update("user").
 		Set(memeduck.Ident("age"), memeduck.Param("age")).
@@ -70,6 +75,7 @@ type ExampleUserStruct struct {
 ```
 
 ### Delete
+
 ```go
 	query, _ := memeduck.Delete("user").
 		Where(memeduck.Eq(memeduck.Ident("id"), 123)).
@@ -79,7 +85,7 @@ type ExampleUserStruct struct {
 	// Output: DELETE FROM user WHERE id = 123 AND unused = TRUE
 ```
 
-You can see more examples in the examples sectionss of the [documentation](https://pkg.go.dev/github.com/genkami/memeduck).
+You can see more examples in the examples sectionss of the [documentation](https://pkg.go.dev/github.com/abyssparanoia/memeduck).
 
 ## License
 

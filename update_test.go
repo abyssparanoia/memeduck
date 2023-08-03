@@ -5,7 +5,7 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	"github.com/genkami/memeduck"
+	"github.com/abyssparanoia/memeduck"
 )
 
 func testUpdate(t *testing.T, stmt *memeduck.UpdateStmt, expected string) {

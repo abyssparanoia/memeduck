@@ -5,7 +5,7 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	"github.com/genkami/memeduck"
+	"github.com/abyssparanoia/memeduck"
 )
 
 func testSelect(t *testing.T, stmt *memeduck.SelectStmt, expected string) {

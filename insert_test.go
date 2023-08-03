@@ -7,11 +7,11 @@ import (
 
 	"cloud.google.com/go/civil"
 	"cloud.google.com/go/spanner"
-	"github.com/MakeNowJust/memefish/pkg/ast"
+	"github.com/cloudspannerecosystem/memefish/ast"
 	"github.com/stretchr/testify/assert"
 
-	"github.com/genkami/memeduck"
-	"github.com/genkami/memeduck/internal"
+	"github.com/abyssparanoia/memeduck"
+	"github.com/abyssparanoia/memeduck/internal"
 )
 
 func testInsert(t *testing.T, stmt *memeduck.InsertStmt, expected string) {
