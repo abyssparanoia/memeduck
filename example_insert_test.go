@@ -3,7 +3,7 @@ package memeduck_test
 import (
 	"fmt"
 
-	"github.com/genkami/memeduck"
+	"github.com/abyssparanoia/memeduck"
 )
 
 func ExampleInsert() {
