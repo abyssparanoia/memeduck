@@ -4,10 +4,10 @@ import (
 	"reflect"
 	"strings"
 
-	"github.com/MakeNowJust/memefish/pkg/ast"
+	"github.com/cloudspannerecosystem/memefish/ast"
 	"github.com/pkg/errors"
 
-	"github.com/genkami/memeduck/internal"
+	"github.com/abyssparanoia/memeduck/internal"
 )
 
 // SelectStmt builds SELECT statements.
@@ -112,6 +112,10 @@ func (s *SelectStmt) SQL() (string, error) {
 	return stmt.SQL(), nil
 }
 
+func isCountStar(s string) bool {
+	return strings.ToLower(s) == "count(*)"
+}
+
 func (s *SelectStmt) toAST() (*ast.Select, error) {
 	var err error
 	var where *ast.Where = nil
@@ -127,8 +131,14 @@ func (s *SelectStmt) toAST() (*ast.Select, error) {
 	}
 	items := make([]ast.SelectItem, 0, len(s.cols))
 	for _, col := range s.cols {
+		var expr ast.Expr
+		if isCountStar(col) {
+			expr = &ast.CountStarExpr{}
+		} else {
+			expr = &ast.Ident{Name: col}
+		}
 		items = append(items, &ast.ExprSelectItem{
-			Expr: &ast.Ident{Name: col},
+			Expr: expr,
 		})
 	}
 	if len(s.subQueries) > 0 {
