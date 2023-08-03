@@ -7,7 +7,7 @@ import (
 
 	"cloud.google.com/go/civil"
 	"cloud.google.com/go/spanner"
-	"github.com/cloudspannerecosystem/memefish/ast"
+	"github.com/cloudspannerecosystem/memefish/pkg/ast"
 	"github.com/stretchr/testify/assert"
 
 	"github.com/abyssparanoia/memeduck"
