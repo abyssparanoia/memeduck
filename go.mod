@@ -5,7 +5,7 @@ go 1.20
 require (
 	cloud.google.com/go v0.111.0
 	cloud.google.com/go/spanner v1.54.0
-	github.com/cloudspannerecosystem/memefish v0.0.0-20230403015737-24c8a514b9e7
+	github.com/cloudspannerecosystem/memefish v0.0.0-20231128072053-0a1141e8eb65
 	github.com/pkg/errors v0.9.1
 	github.com/stretchr/testify v1.8.4
 )

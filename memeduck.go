@@ -4,7 +4,7 @@ import (
 	"reflect"
 	"strings"
 
-	"github.com/cloudspannerecosystem/memefish/pkg/ast"
+	"github.com/cloudspannerecosystem/memefish/ast"
 	"github.com/pkg/errors"
 
 	"github.com/abyssparanoia/memeduck/internal"
