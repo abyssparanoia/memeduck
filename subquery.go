@@ -1,6 +1,6 @@
 package memeduck
 
-import "github.com/cloudspannerecosystem/memefish/pkg/ast"
+import "github.com/cloudspannerecosystem/memefish/ast"
 
 type SubQuery interface {
 	ToAST() (ast.SelectItem, error)

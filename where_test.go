@@ -4,7 +4,7 @@ import (
 	"testing"
 
 	"github.com/abyssparanoia/memeduck"
-	"github.com/cloudspannerecosystem/memefish/pkg/ast"
+	"github.com/cloudspannerecosystem/memefish/ast"
 	"github.com/stretchr/testify/assert"
 )
 
